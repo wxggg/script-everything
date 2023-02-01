@@ -4,6 +4,10 @@ Makes everything easier with scripts.
 
 ## Contents
 
+### Environment
+
+* [env/vim/README.md](env/vim/README.md): set up vim environment
+
 ### Examples
 
 * [examples/python/array_example.py](examples/python/array_example.py): operate with array、list...

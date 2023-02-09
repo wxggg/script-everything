@@ -8,6 +8,7 @@ Makes everything easier with scripts.
 
 * [env/vim/README.md](env/vim/README.md): set up vim environment
 * [env/shell/README.md](env/shell/README.md): set up shell environment
+* [env/bpf/README.md](env/bpf/README.md): set up bpf environment
 
 ### Examples
 

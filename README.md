@@ -7,6 +7,7 @@ Makes everything easier with scripts.
 ### Environment
 
 * [env/vim/README.md](env/vim/README.md): set up vim environment
+* [env/shell/README.md](env/shell/README.md): set up shell environment
 
 ### Examples
 

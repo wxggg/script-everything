@@ -1,3 +1,4 @@
+
 " Specify a directory for plugins " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
@@ -75,6 +76,11 @@ Plug 'preservim/nerdtree'
 map <C-e> :NERDTreeToggle<CR>
 noremap <leader>t :<C-U><C-R> NERDTreeFind<CR><CR>
 
+Plug 'rhysd/vim-clang-format'
+" map to <Leader>cf in C++ code
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>ff :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>ff :ClangFormat<CR>
+
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 " don't show the help in normal mode
 let g:Lf_HideHelp = 1
@@ -142,8 +148,9 @@ call plug#end()
 " color PaperColor
 " color PapayaWhip
 " color Light
-color Dev_Delight
+" color Dev_Delight
 " color lightning
+" color yeller
 
 "
 " color random
@@ -151,7 +158,7 @@ color Dev_Delight
 " color OceanicNext
 " color PerfectDark
 " color DarkDefault
-" color purify
+color purify
 " color antares
 " color Chasing_Logic
 " color CandyPaper
@@ -191,11 +198,11 @@ set nu
 
 set colorcolumn=100
 
-"历史命令保存行数 
-set history=100 
+"历史命令保存行数
+set history=100
 
 "当文件被外部改变时自动读取
-set autoread 
+set autoread
 
 "取消自动备份及产生swp文件
 set nobackup
@@ -235,10 +242,10 @@ set showmatch
 
 "在搜索的时候忽略大小写
 set ignorecase
- 
+
 "高亮被搜索的句子
 set hlsearch
- 
+
 "在搜索时，输入的词句的逐字符高亮（类似firefox的搜索）
 set incsearch
 
@@ -284,7 +291,7 @@ set fencs=utf-8,usc-bom,euc-jp,gb18030,gbk,gb2312,cp936
 "设定字体
 set guifont=Courier_New:h11:cANSI
 set guifontwide=新宋体:h11:cGB2312
- 
+
 "设定编码
 set enc=utf-8
 set fileencodings=ucs-bom,utf-8,chinese
@@ -310,6 +317,8 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType java set omnifunc=javacomplete#Complet
 
 autocmd BufEnter *.bt :setlocal filetype=c
+autocmd BufEnter *.mu :setlocal filetype=c
+autocmd BufEnter *.cu :setlocal filetype=c
 
 set tags=./tags;
 set tags+=./*/tags;
